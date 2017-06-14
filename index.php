@@ -20,7 +20,7 @@
           <div class="col-md-2"></div>
 
           <div class="col-md-8">
-          <form id="login" action="login.php" method="post">
+          <form id="login" action="loginControl.php" method="post">
 
             <div class="form-group">
               <label for="inputEmail">Email address</label>

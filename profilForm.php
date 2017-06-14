@@ -1,15 +1,4 @@
-<?php include("unauthorized.php");?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Profil</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <?php include("header.php") ?>
+
     <div class="container">
       <div class="col-md-2"></div>
 
@@ -36,9 +25,9 @@
 
           <div class="form-group">
             <label for="interest">Interest :</label>
-              <input class="status" name="interestInternet" type="checkbox" value="internet"> Internet
-              <input class="status" name="interestComputers" type="checkbox" value="computers"> Computers
-              <input class="status" name="interestGames" type="checkbox" value="games"> Games
+              <input class="status" name="interest[]" type="checkbox" value="internet"> Internet
+              <input class="status" name="interest[]" type="checkbox" value="computers"> Computers
+              <input class="status" name="interest[]" type="checkbox" value="games"> Games
           </div>
 
           <button type="submit" class="btn btn-default">Submit</button>
@@ -49,7 +38,3 @@
       <div class="col-md-2"></div>
 
     </div>
-
-    <?php include("footer.php") ?>
-  </body>
-</html>

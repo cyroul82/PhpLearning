@@ -1,40 +1,27 @@
 <?php include("unauthorized.php");?>
 <?php
+if(isset($_GET['inputName']) && $_GET['inputName'] != '' && isset($_GET['inputAge']) && $_GET['inputAge'] != '' && isset($_GET['status'])){
+  $_SESSION['inputName'] = htmlentities($_GET['inputName']);
+  $_SESSION['inputAge'] = htmlentities($_GET['inputAge']);
+  $_SESSION['status'] = $_GET['status'];
 
-$interestInternet = false;
-$interestComputers= false;
-$interestGames = false;
-
-if(isset($_GET['inputName']) && !empty($_GET['inputName']) ){
-  $inputName = $_GET['inputName'];
+  if(isset($_GET['interest'])){
+    foreach ($_GET['interest'] as $item) {
+      if($item == "internet"){
+        $_SESSION['internet'] = true;
+      }
+      else if($item == "computers"){
+        $_SESSION['computers'] = true;
+      }
+      else if($item == "games"){
+        $_SESSION['games'] = true;
+      }
+    }
+  }
+  header("location: profil.php");
 }
 else {
-  echo"ioey";
+  header("location: errorPage.php");
+  exit();
 }
-if(isset($_GET['inputAge']) && !empty($_GET['inputAge'])){
-  $inputAge = $_GET['inputAge'];
-}
-
-if(isset($_GET['status'])){
-  $status = $_GET['status'];
-}
-
-if(isset($_GET['interestInternet'])){
-  $interestInternet = true;
-}
-
-  if(isset($_GET['interestComputers'])){
-    $interestComputers = true;
-  }
-
-  if(isset($_GET['interestGames'])){
-    $interestGames = true;
-  }
-
-  foreach($_GET as $key => $element){
-    echo $key . ' : ' . $element . '<br>';
-  }
-
-
-
 ?>
