@@ -8,8 +8,10 @@ if(!(isset($_POST['inputEmail']) && !empty($_POST['inputEmail']) && isset($_POST
 <?php
 }
 else {
-  $_SESSION['inputEmail'] = htmlentities($_POST['inputEmail'], ENT_QUOTES | ENT_IGNORE, "UTF-8");
-  $_SESSION['inputPassword'] = htmlentities($_POST['inputPassword'], ENT_QUOTES | ENT_IGNORE, "UTF-8");
+  echo "salut";
+  $_SESSION['user'] = htmlentities($_POST['inputEmail']);
+  $_SESSION['pwd'] = htmlentities($_POST['inputPassword']);
   header("location: loggedin.php");
 }
+
  ?>
