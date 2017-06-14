@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  margin-left: 20px;
+}
+
+[class*="col-"] {
+  margin-bottom: 15px;
+}
+
+.status {
+  margin-left: 10px!important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  line-height: 60px;
+}
