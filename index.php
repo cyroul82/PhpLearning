@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(isset($_SESSION['user'])){
+    header("location: profil.php");
+  }
+ ?>
 <!DOCTYPE html>
   <html>
 
@@ -6,9 +12,7 @@
     <meta name="author" content="Cyril Rat">
     <meta name="description" content="AFPA Learning">
     <title>Php Learning</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <?php include('head.php'); ?>
   </head>
 
   <body>
