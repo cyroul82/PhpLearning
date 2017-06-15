@@ -8,21 +8,28 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">Cyril Rat</a>
+		<a class="navbar-brand" href="#">
+      <?php
+      if(isset($_SESSION['user'])){
+        echo $_SESSION['user'];
+      } else {
+        echo "Bonjour";
+      }
+     ?></a>
 	</div>
 
 	<div class="collapse navbar-collapse button-menu">
 		<ul class="nav navbar-nav ">
-            <li><a href="#"><i class="fa fa-home"></i> HOME</a></li>
+            <li><a href="http://www.google.fr"><i class="fa fa-home"></i> HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACT</a></li>
 		</ul>
-
+        <?php if(isset($_SESSION['user'])) { ?>
         <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="glyphicon glyphicon-user"></span> 
-                        <strong>Cyril</strong>
+                        <strong>Menu</strong>
                         <span class="glyphicon glyphicon-chevron-down"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -35,10 +42,10 @@
                                         </p>
                                     </div>
                                     <div class="col-lg-8">
-                                        <p class="text-left"><strong>Cyril</strong></p>
-                                        <p class="text-left small">cyril@gmail.com</p>
+                                        <p class="text-left"><strong><?php if(isset($_SESSION['username'])) echo $_SESSION['username'] ?></strong></p>
+                                        <p class="text-left small"><?php echo $_SESSION['user'] ?></p>
                                         <p class="text-left">
-                                            <a href="#" class="btn btn-primary btn-block btn-sm">Logout</a>
+                                            <a href="logout.php" class="btn btn-primary btn-block btn-sm">Logout</a>
                                         </p>
                                     </div>
                                 </div>
@@ -60,7 +67,8 @@
                     </ul>
                 </li>
             </ul>
-
+        <?php }
+         ?>
 	</div>
 
   </nav>

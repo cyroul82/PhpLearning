@@ -3,6 +3,7 @@
   if(isset($_SESSION['user'])){
     header("location: profil.php");
   }
+
  ?>
 <!DOCTYPE html>
   <html>
@@ -12,6 +13,7 @@
     <meta name="author" content="Cyril Rat">
     <meta name="description" content="AFPA Learning">
     <title>Php Learning</title>
+
     <?php include('head.php'); ?>
   </head>
 
@@ -42,6 +44,8 @@
             </div>
 
           </form>
+          <a href="newAccount.php">Create new account ?</a> <br>
+          <a href="#">Lost your password ?</a>
         </div>
 
         <div class="col-md-2"></div>
