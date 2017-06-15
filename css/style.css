@@ -8,10 +8,6 @@ body, html {
   padding: 0;
 }
 
-label {
-  margin-left: 20px;
-}
-
 [class*="col-"] {
   margin-bottom: 15px;
 }
@@ -25,4 +21,13 @@ label {
   bottom: 0;
   height: 60px;
   line-height: 60px;
+}
+
+.navbar-nav>li>.dropdown-menu {
+  padding-left: 5px!important;
+  padding-right: 5px!important;
+}
+
+.divider {
+  margin-top:0!important;
 }

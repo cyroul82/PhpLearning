@@ -54,10 +54,10 @@ class Voiture{
   public function setInsurance($insurance){
     $this->insurance = $insurance;
     if($insurance){
-      $this->message = "insured...";
+      $this->message = "got insurance";
     }
     else{
-      $this->message = "not insured...";
+      $this->message = "no insurance";
     }
   }
 

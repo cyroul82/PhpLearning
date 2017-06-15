@@ -1,7 +1,7 @@
 <?php
 function connect(){
   try {
-    $bdd = new PDO('mysql:host=localhost;dbname=login;charset=utf8', 'afpa', 'cdi14');
+    $bdd = new PDO('mysql:host=localhost;dbname=login;charset=utf8','afpa','cdi14');
     return $bdd;
   }
   catch(Exception $e) {
@@ -18,6 +18,15 @@ function addUser($user){
                       'pass' => $user['pass']));
 }
 
+function getUserProfil($email=null){
+  if(isset($email) && !empty($email)){
+    $req = connect()->query("select * from usercontact where email='" . $email . "'");
+    $profil = $req->fetch();    
+    $req->closeCursor();
+    return $profil;
+  }
+}
+
 function login($email, $pass){
   $error;
   if(emailExists($email)){
@@ -26,6 +35,7 @@ function login($email, $pass){
     if($pass == $u['pass']){
       return true;
     }
+    $response->closeCursor();
   }else {
     $error = array('error'=>'email not found in the DB');
     return false;

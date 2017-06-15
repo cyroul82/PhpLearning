@@ -1,7 +1,7 @@
 <?php
   session_start();
-  if(isset($_SESSION['user'])){
-    header("location: profil.php");
+  if(!isset($_SESSION['email'])){
+    header("location: login.php");
   }
 
  ?>
@@ -23,32 +23,11 @@
 
         <div class="container">
 
-          <div class="col-md-2"></div>
+          <a href="exo1.php"><button type="button" class="btn btn-primary">Exo 1</button></a>
 
-          <div class="col-md-8">
-          <form id="login" action="loginControl.php" method="POST">
+          <a href="addCar.php"><button type="button" class="btn btn-success">Add Car</button></a>
 
-            <div class="form-group">
-              <label for="inputEmail">Email address</label>
-              <input type="email" class="form-control" name="inputEmail" placeholder="Email" required>
-            </div>
-
-            <div class="form-group">
-              <label for="inputPassword">Password</label>
-              <input type="password" class="form-control" name="inputPassword" placeholder="Password" required>
-            </div>
-
-            <div class="form-group text-center">
-              <button type="submit" class="btn btn-default">Submit</button>
-              <button type="reset" class="btn btn-default">Reset</button>
-            </div>
-
-          </form>
-          <a href="newAccount.php">Create new account ?</a> <br>
-          <a href="#">Lost your password ?</a>
-        </div>
-
-        <div class="col-md-2"></div>
+          <a href="carDisplay.php"><button type="button" class="btn btn-warning">List Cars</button></a>
 
         </div>
 

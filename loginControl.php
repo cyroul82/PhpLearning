@@ -10,15 +10,18 @@ if(!(isset($_POST['inputEmail']) && !empty($_POST['inputEmail']) && isset($_POST
 <?php
 }
 else {
-  $user = htmlentities($_POST['inputEmail']);
+  $email = htmlentities($_POST['inputEmail']);
   $pass = htmlentities($_POST['inputPassword']);
 
-  if(login($user, $pass)){
-    $_SESSION['user']=$user;
-    header("location: loggedin.php");
+  if(login($email, $pass)){
+    $_SESSION['email']=$email;
+    $profil = getUserProfil($email);
+    $_SESSION['FIRSTNAME']=$profil['FIRSTNAME'];
+    $_SESSION['SURNAME']=$profil['SURNAME'];
+    header("location: index.php");
   }
   else{
-    header("location: index.php");
+    header("location: login.php?error=login");
   }
 
 }

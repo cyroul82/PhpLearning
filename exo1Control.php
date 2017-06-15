@@ -6,7 +6,6 @@ if(isset($_GET['inputName']) && $_GET['inputName'] != '' && isset($_GET['inputAg
   $status = $_GET['status'];
 
   $params = "?name=$name&age=$age&status=$status";
-  echo $params;
 
   if(isset($_GET['interest'])){
     foreach ($_GET['interest'] as $item) {
@@ -25,8 +24,9 @@ if(isset($_GET['inputName']) && $_GET['inputName'] != '' && isset($_GET['inputAg
       }
     }
   }
-  setcookie('pseudo', $name, time() + 365*24*3600, null, null, false, true); 
-  header("location: profil.php$params" );
+  setcookie('pseudo', $name, time() + 365*24*3600, null, null, false, true);
+
+  header("location: exo1Display.php$params" );
 
 }
 else {

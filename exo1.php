@@ -3,13 +3,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><?php echo strtoupper($_SESSION['user']);?></title>
+    <title><?php echo strtoupper($_SESSION['FIRSTNAME']);?></title>
     <?php include('head.php'); ?>
   </head>
   <body>
     <?php include('header.php'); ?>
-    <?php include('profilForm.php'); ?>
-    <?php include("footer.php"); ?>
+    <?php include('exo1Form.php'); ?>
   </body>
 
   </html>
