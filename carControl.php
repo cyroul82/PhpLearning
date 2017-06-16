@@ -1,4 +1,6 @@
 <?php
+  session_start();
+
   require('voiture.php');
 
   if(isset($_POST['registration']) && !empty($_POST['registration'])
@@ -15,11 +17,16 @@
        $power = htmlentities($_POST['power']);
        $capacity = htmlentities($_POST['capacity']);
        $place = htmlentities($_POST['place']);
+
        $car = new voiture($registration, $coulor, $weight, $power, $capacity, $place);
+       $_SESSION['reg']='salut';
+        // header("location: carAdded.php?reg=$registration&col=$coulor");
+        include('carAdded.php');
+
 
   }
   else {
-    header("location: carDisplay.php");
+    header("location: addCar.php");
   }
 
  ?>

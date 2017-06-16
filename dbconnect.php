@@ -21,7 +21,7 @@ function addUser($user){
 function getUserProfil($email=null){
   if(isset($email) && !empty($email)){
     $req = connect()->query("select * from usercontact where email='" . $email . "'");
-    $profil = $req->fetch();    
+    $profil = $req->fetch();
     $req->closeCursor();
     return $profil;
   }
@@ -35,7 +35,6 @@ function login($email, $pass){
     if($pass == $u['pass']){
       return true;
     }
-    $response->closeCursor();
   }else {
     $error = array('error'=>'email not found in the DB');
     return false;

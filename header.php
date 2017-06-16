@@ -36,12 +36,14 @@
                         <li>
                             <div class="navbar-login">
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-md-12">
                                         <p class="text-center">
                                             <span class="glyphicon glyphicon-user icon-size"></span>
                                         </p>
                                     </div>
-                                    <div class="col-lg-8">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
                                         <p class="text-left"><strong><?php if(isset($_SESSION['FIRSTNAME'])) echo $_SESSION['FIRSTNAME'] ?></strong></p>
                                         <p class="text-left small"><?php echo $_SESSION['email'] ?></p>
                                         <p class="text-left">
