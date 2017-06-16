@@ -10,16 +10,16 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
   $to = 'cyril.rat@gmail.com';
 
   $message = wordwrap($message, 70, "\r\n");
-  var_dump("oye");
-  $send = mail($to, $subject, $message, $header);
-  var_dump($send);
+
+
+  $send = mail($to, $subject, $message, $headers);
 if (!$send) {
     $errorMessage = error_get_last()['message'];
-    header("location: contactSent.php?error=" . $errorMessage);
+
+
+
 }
-else {
-  header("location: contactSent.php");
-}
+  include("contactSent.php");
 }
 else {
   var_dump("salut");

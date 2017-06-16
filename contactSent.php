@@ -7,13 +7,13 @@
   </head>
   <body>
     <?php include('header.php'); ?>
-    <?php if(isset($_GET[error])){
-      echo "<button type="button" class="btn btn-warning">Message not Sent, check your form </button>";
+    <?php if(isset($error)){
+      echo "<button type=\"button\" class=\"btn btn-warning\">Message not Sent, check your form </button>";
       echo "<br> <a href=\"contact.php\">Back</a>";
 
     }
     else {
-      echo "<button type="button" class="btn btn-success">Message Sent, I'll come back to you ASAP</button>";
+      echo "<button type=\"button\" class=\"btn btn-success\">Message Sent, I'll come back to you ASAP</button>";
     } ?>
 
   </body>
