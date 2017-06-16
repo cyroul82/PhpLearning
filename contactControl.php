@@ -10,7 +10,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) &
   $to = 'cyril.rat@gmail.com';
 
   $message = wordwrap($message, 70, "\r\n");
-  var_dump($message);
+  var_dump("oye");
   $send = mail($to, $subject, $message, $header);
   var_dump($send);
 if (!$send) {
