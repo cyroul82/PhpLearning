@@ -22,7 +22,7 @@
 		<ul class="nav navbar-nav ">
             <li><a href="index.php"><i class="fa fa-home"></i> HOME</a></li>
             <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
 		</ul>
         <?php if(isset($_SESSION['email'])) { ?>
         <ul class="nav navbar-nav navbar-right">

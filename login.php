@@ -23,9 +23,9 @@
 
         <div class="container">
 
-          <div class="col-md-2"></div>
+          <div class="col-md-3"></div>
 
-          <div class="col-md-8">
+          <div class="col-md-6 well well-sm">
             <?php if(isset($_GET['error'])){?>
               <div class="alert alert-danger">
                 <strong>Error : </strong> check email and password !
@@ -53,7 +53,7 @@
           <a href="#">Lost your password ?</a>
         </div>
 
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
 
         </div>
 
